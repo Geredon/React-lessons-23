@@ -1,0 +1,17 @@
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: n;
+    background-color: #4d5d28;
+}
+
+.item {
+    padding: 5px 0;
+    color: #fff;
+}
+.item:hover {
+    color: antiquewhite;
+    cursor: pointer;
+}

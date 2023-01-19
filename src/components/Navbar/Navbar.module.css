@@ -5,11 +5,18 @@
     align-items: center;
     grid-area: n;
     background-color: #4d5d28;
+    padding: 20px;
 }
 
-.item {
-    padding: 5px 0;
+.item  {
     color: #fff;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+.active {
+    color: gold;
+    text-decoration: none;
 }
 .item:hover {
     color: antiquewhite;

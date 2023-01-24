@@ -7,18 +7,18 @@ const DialogItem = (props) => {
     let path = "/dialogs/" + props.id;
     return (
         <div className={style.dialog}>
-            <NavLink to={path}>{props.name}</NavLink>
+            <NavLink className={style.link} to={path}> {props.img} {props.name} </NavLink>
         </div>
     )
 };
+
 const Message = (props) => {
     return (
         <div className={style.message}>{props.message}</div>
     )
 }
 const Dialogs = (props) => {
-
-    let dialogsElements = props.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} key={dialog.id}/>)
+    let dialogsElements = props.dialogs.map(dialog => <DialogItem img={dialog.imgDialogs} name={dialog.name} id={dialog.id} key={dialog.id}/>)
     let messagesElements = props.messages.map(messages => <Message message={messages.message} key={messages.id}/>)
 
     return (

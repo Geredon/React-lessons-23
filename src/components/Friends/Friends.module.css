@@ -1,0 +1,30 @@
+
+
+.heading {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+.heading h4{
+    margin: 20px 0;
+}
+
+.wrapperFriends {
+    display: flex;
+
+}
+.friendsItem {
+    padding: 5px;
+    text-align: center;
+}
+
+.friendsItem a {
+    text-decoration: none;
+    color: white;
+}
+
+.friendsItem img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}

@@ -1,17 +1,24 @@
 import React from "react";
-import style from "./Myposts.module.css"
+import style from "./MyPosts.module.css"
 import Post from "./Post/Post";
 
-const Myposts = (props) => {
+const MyPosts = (props) => {
 
     let postElement = props.posts.map((element) => <Post message={element.message} like={element.likesCount} key = {element.id}/> )
+
+    let newPostElement = React.createRef();
+    let addPosts = () => {
+        let text = newPostElement.current.value;
+        alert(text)
+    }
+
     return (
         <div className={style.postsBlock}>
             <h3>My post</h3>
             <div>
-                <div><textarea></textarea></div>
+                <div><textarea ref={newPostElement}></textarea></div>
                 <div>
-                    <button>Add post</button>
+                    <button onClick={ addPosts }>Add post</button>
                 </div>
             </div>
             <div className={style.posts}>
@@ -21,4 +28,4 @@ const Myposts = (props) => {
     )
 };
 
-export default Myposts;
+export default MyPosts;
